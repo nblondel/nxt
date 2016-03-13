@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    
+    <LinearLayout android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/Layout2" android:gravity="center">
+   
+        <Button android:text="Start" android:layout_width="75dp" android:layout_height="40dp" android:id="@+id/buttonStartChrono" android:background="#22780F"></Button>
+    	<Chronometer android:text="Chronometer" android:layout_width="70dp" android:layout_height="wrap_content" android:id="@+id/chronometer" android:textSize="18px" android:gravity="center" android:layout_marginLeft="5px" android:layout_marginRight="5px"></Chronometer>
+        <Button android:text="Stop" android:layout_width="75dp" android:layout_height="40dp" android:id="@+id/buttonStopChrono" android:background="#ED0000"></Button>
+        
+        <Button android:layout_width="wrap_content" android:id="@+id/buttonOptim" android:text="Optimize" android:layout_height="wrap_content" android:layout_marginLeft="20dp"></Button>
+        <Button android:text=" STOP " android:id="@+id/buttonDirectCommandsStop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp"></Button>
+    </LinearLayout>
+    
+    
+    <HorizontalScrollView android:id="@+id/scroll" android:layout_width="wrap_content" android:layout_height="fill_parent">
+    <ScrollView android:id="@+id/scroll2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:background="#6c3908">
+    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+    
+    	<!-- Direct Move -->
+	    <LinearLayout android:weightSum="1" android:layout_width="fill_parent" android:orientation="vertical" android:layout_height="fill_parent" android:id="@+id/Layout1" android:gravity="center">
+	        <LinearLayout android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/Layout2" android:gravity="center">
+	            <Button android:text="Up" android:layout_width="80dp" android:layout_height="wrap_content" android:id="@+id/buttonAvancer"></Button>
+	        </LinearLayout>
+	        <LinearLayout android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/Layout2" android:gravity="center">
+	            <Button android:text="Left" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_marginRight="15px" android:id="@+id/buttonGauche"></Button>
+	            <Button android:text="Right" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_marginLeft="15px" android:id="@+id/buttonDroite"></Button>
+	        </LinearLayout>
+	        <LinearLayout android:layout_width="wrap_content" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/Layout2" android:gravity="center">
+	            <Button android:text="Back" android:layout_width="80dp" android:layout_height="wrap_content" android:id="@+id/buttonReculer"></Button>
+	        </LinearLayout>
+	    </LinearLayout>
+    
+    	<!-- Map -->
+	    <LinearLayout android:weightSum="1" android:orientation="vertical" android:id="@+id/LayoutVertMap" android:layout_width="wrap_content" android:layout_height="fill_parent">
+	    
+		    <!-- les carrés vides n'ont pas d'ID, les murs extérieurs non plus -->
+		    
+		    <!-- MUR DU HAUT -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		  		<ImageView android:src="@drawable/murexterieurhorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		    </LinearLayout>
+		    
+		    <!-- 4 LIGNES DU LABYRINTHE -->
+		    
+		    <!-- LIGNE 1 -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:id="@+id/point6_0" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur6_1" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point6_2" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur6_3" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point6_4" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur6_5" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point6_6" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur6_7" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point6_8" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur6_9" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point6_10" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		  	</LinearLayout>
+		  	<LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		  		<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_0" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		        <ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_2" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_4" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_6" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_8" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur5_10" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		    </LinearLayout>
+		    
+		    <!-- LIGNE 2 -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:id="@+id/point4_0" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur4_1" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point4_2" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur4_3" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point4_4" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur4_5" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point4_6" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur4_7" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point4_8" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur4_9" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point4_10" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		  	</LinearLayout>
+		  	<LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		  		<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_0" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		        <ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_2" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_4" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_6" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_8" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur3_10" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		    </LinearLayout>
+		    
+		    <!-- LIGNE 3 -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:id="@+id/point2_0" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur2_1" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point2_2" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur2_3" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point2_4" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur2_5" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point2_6" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur2_7" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point2_8" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur2_9" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point2_10" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		  	</LinearLayout>
+		  	<LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		  		<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_0" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		        <ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_2" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_4" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_6" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_8" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur1_10" android:src="@drawable/passagehorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:src="@drawable/carrevide" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		    </LinearLayout>
+		    
+		    <!-- LIGNE 4 -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:id="@+id/point0_0" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur0_1" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point0_2" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur0_3" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point0_4" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur0_5" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point0_6" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur0_7" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point0_8" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageButton android:id="@+id/mur0_9" android:src="@drawable/passagevertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@null"></ImageButton>
+		    	<ImageView android:id="@+id/point0_10" android:src="@drawable/pointlab" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		        <ImageView android:src="@drawable/murvertical" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		  	</LinearLayout>
+		  	
+		  	<!-- MUR DU BAS -->
+		    <LinearLayout android:weightSum="1" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		  		<ImageView android:src="@drawable/murexterieurhorizontal" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+		    </LinearLayout>
+	  	
+	  	</LinearLayout>
+  	
+  	</LinearLayout>
+  	</ScrollView>
+    </HorizontalScrollView>
+
+</LinearLayout>

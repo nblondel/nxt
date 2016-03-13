@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, NXT_LO52Activity!</string>
+    <string name="app_name">NXT_LO52</string>
+    <string name="xprompt">0</string>
+    <string name="yprompt">0</string>
+    <string name="orientationprompt">NORTH</string>
+    
+    <string-array name="x_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string-array name="y_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <string-array name="orientation_array">
+        <item>NORTH</item>
+        <item>WEST</item>
+        <item>EAST</item>
+        <item>SOUTH</item>
+    </string-array>
+    
+</resources>
